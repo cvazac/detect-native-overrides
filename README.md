@@ -12,15 +12,15 @@ Install [Tampermonkey](https://tampermonkey.net/).
 
 Click the + to create a new userscript.
 
-Copy the source of [detect-native-overrides.tm.js](https://raw.githubusercontent.com/cvazac/detect-native-overrides/master/dist/detect-native-overrides.tm.js) and paste it into the new userscript.
+Copy the contents of [detect-native-overrides.tm.js](https://raw.githubusercontent.com/cvazac/detect-native-overrides/master/dist/detect-native-overrides.tm.js) and paste it into the new userscript.
 
-Explore to a page, right click anywhere in the page, 
+Explore to a page, right click anywhere, click TamperMonkey | detect-native-overrides.tm.js.
 
 ![alt text](https://raw.githubusercontent.com/cvazac/detect-native-overrides/master/img/tampermonkey.png)
 
 ## Expected output
 In the console, you will see a `warn` with an array of overriden methods.
 
-Example:
+*Example:*
 
 ![alt text](https://raw.githubusercontent.com/cvazac/detect-native-overrides/master/img/output.png "www.google.com")
