@@ -19,7 +19,7 @@ Explore to a page, right click anywhere, click TamperMonkey | detect-native-over
 ![alt text](https://raw.githubusercontent.com/cvazac/detect-native-overrides/master/img/tampermonkey.png)
 
 ## Expected output
-In the console, you will see a `warn` with an array of overriden methods.
+In the console, you will see a `warn` with an array of overriden methods. If you see a method name with a namespace, presume `window`.
 
 *Example:*
 
