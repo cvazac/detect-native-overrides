@@ -1,7 +1,7 @@
 # detect-native-overrides
 
 ## Bookmarklet
-Using the content of [detect-native-overrides.js](https://raw.githubusercontent.com/cvazac/detect-native-overrides/master/src/detect-native-overrides.js), create the bookmarklet using a [bookmarklet maker](https://caiorss.github.io/bookmarklet-maker/). 
+Using the content of [src/detect-native-overrides.js](https://raw.githubusercontent.com/cvazac/detect-native-overrides/master/src/detect-native-overrides.js), create the bookmarklet using a [bookmarklet maker](https://caiorss.github.io/bookmarklet-maker/). 
 
 Explore to a page and click the bookmarklet. 
 
@@ -22,3 +22,5 @@ We currently rely on `Object.getOwnPropertyNames` which has decent [browser supp
 You will probably see some `Illegal invocation` errors in the console, sorry about that.
 
 ![alt text](https://raw.githubusercontent.com/cvazac/detect-native-overrides/master/img/error.png "Illegal invocation")
+
+[Tampermonkey](https://tampermonkey.net/) is a wonderful tool that I highly encourage everyone to try out. That said, it overrides many natives, so I recommend that you disable it before running the bookmarklet. 
