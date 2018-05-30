@@ -1,7 +1,7 @@
 # detect-native-overrides
 
 ## Bookmarklet
-Copy the source of [detect-native-overrides.js](./TODO.js).
+Copy the source of [detect-native-overrides.js](https://raw.githubusercontent.com/cvazac/detect-native-overrides/master/src/detect-native-overrides.js).
 
 Paste the source into a [bookmarklet maker](http://bookmarklets.org/maker/).
 
@@ -12,15 +12,15 @@ Install [Tampermonkey](https://tampermonkey.net/).
 
 Click the + to create a new userscript.
 
-Copy the source of [detect-native-overrides.tm.js](./TODO.js) and paste it into the new userscript.
+Copy the source of [detect-native-overrides.tm.js](https://raw.githubusercontent.com/cvazac/detect-native-overrides/master/dist/detect-native-overrides.tm.js) and paste it into the new userscript.
 
 Explore to a page, right click anywhere in the page, 
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
+![alt text](https://raw.githubusercontent.com/cvazac/detect-native-overrides/master/img/tampermonkey.png)
 
 ## Expected output
 In the console, you will see a `warn` with an array of overriden methods.
 
 Example:
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "www.google.com")
+![alt text](https://raw.githubusercontent.com/cvazac/detect-native-overrides/master/img/output.png "www.google.com")
