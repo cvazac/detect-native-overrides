@@ -3,8 +3,8 @@
     return []
   }
 
-  const overridden = []
-  let iframe, freshWindow, objects, serializer
+  const overridden = [];
+  let iframe, freshWindow, objects, serializer;
   function setup() {
     const d = win.document
     iframe = d.createElement('iframe')

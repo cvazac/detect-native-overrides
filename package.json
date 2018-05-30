@@ -1,9 +1,0 @@
-{
-  "scripts": {
-    "start": "nodemon --watch ./dist/detect-native-overrides.js --watch ./dist/detect-native-overrides.tm.template.js ./build/index.js"
-  },
-  "devDependencies": {
-    "mustache": "^2.3.0",
-    "nodemon": "^1.17.5"
-  }
-}
