@@ -73,7 +73,7 @@
   setup()
   for (let objectIndex = 0; objectIndex < objects.length; objectIndex++) {
     const objectKey = objects[objectIndex]
-    if (['window', 'self', 'top', 'parent', 'frames'].indexOf(objectKey) > -1) {
+    if (['window', 'self', 'top', 'parent', 'frames', 'content'].indexOf(objectKey) > -1) {
       continue
     }
 
