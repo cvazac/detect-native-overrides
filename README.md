@@ -1,13 +1,26 @@
-# overrides-bookmarklet
-[Bookmarklet](javascript:(function()%7B%22use%20strict%22%3Bvar%20_typeof%3D%22function%22%3D%3Dtypeof%20Symbol%26%26%22symbol%22%3D%3Dtypeof%20Symbol.iterator%3Ffunction(e)%7Breturn%20typeof%20e%7D%3Afunction(e)%7Breturn%20e%26%26%22function%22%3D%3Dtypeof%20Symbol%26%26e.constructor%3D%3D%3DSymbol%26%26e!%3D%3DSymbol.prototype%3F%22symbol%22%3Atypeof%20e%7D%3B!function%20checkWindowOverrides(win)%7Bif(!Object.getOwnPropertyNames)return%3Bvar%20overridden%3D%5B%5D%2Ciframe%3Dvoid%200%2CfreshWindow%3Dvoid%200%2Cobjects%3Dvoid%200%2Cserializer%3Dvoid%200%3Bfunction%20setup()%7Bvar%20e%3Dwin.document%3B(iframe%3De.createElement(%22iframe%22)).style.display%3D%22none%22%2Ciframe.src%3D%22javascript%3Afalse%22%2Ce.getElementsByTagName(%22script%22)%5B0%5D.parentNode.appendChild(iframe)%2CfreshWindow%3Diframe.contentWindow%2Cobjects%3DgetKeys(freshWindow)%2Cserializer%3Diframe.contentWindow.Function.prototype.toString%7Dfunction%20teardown()%7Biframe.parentNode.removeChild(iframe)%7Dfunction%20checkWindowObject(e)%7B!1%3D%3D%3DisNativeFunction(e)%26%26overridden.push(e.join(%22.%22))%7Dfunction%20fromKey(e)%7Bvar%20t%3Dwin%3Bfor(e%3D%5B%5D.slice.call(e)%3Bt%26%26e.length%3B)try%7Bt%3Dt%5Be.shift()%5D%7Dcatch(e)%7Breturn%7Dreturn%20t%7Dfunction%20isNativeFunction(key)%7Bvar%20fn%3DfromKey(key)%3Bif(%22function%22%3D%3Dtypeof%20fn)%7Bif(!isNonNativeFunction(fn))return!0%3Bvar%20joined%3Dkey.join(%22.%22)%3Btry%7Breturn%20window.unsafeGlobal%3Dfn%2Ceval(%22delete%20%22%2Bjoined)%2CisNonNativeFunction(fromKey(key))%7Dfinally%7Beval(joined%2B%22%20%3D%20unsafeGlobal%22)%2Cdelete%20window.unsafeGlobal%7Dreturn!1%7D%7Dfunction%20toString(e)%7Breturn%20serializer.call(e)%7Dfunction%20isNonNativeFunction(e)%7Breturn%22function%22%3D%3Dtypeof%20e%26%26!%2F%5C%5Bnative%20code%5C%5D%2F.test(toString(e))%7Dfunction%20getKeys(e)%7Bvar%20t%3DObject.getOwnPropertyNames(e)%3Bfor(var%20o%20in%20e)-1%3D%3D%3Dt.indexOf(o)%26%26t.push(o)%3Breturn%20t%7Dsetup()%3Bfor(var%20objectIndex%3D0%3BobjectIndex%3Cobjects.length%3BobjectIndex%2B%2B)%7Bvar%20objectKey%3Dobjects%5BobjectIndex%5D%3Bif(!(-1%3C%5B%22window%22%2C%22self%22%2C%22top%22%2C%22parent%22%2C%22frames%22%5D.indexOf(objectKey))%26%26(freshWindow%5BobjectKey%5D%26%26(%22object%22%3D%3D%3D_typeof(freshWindow%5BobjectKey%5D)%7C%7C%22function%22%3D%3Dtypeof%20freshWindow%5BobjectKey%5D)))%7BcheckWindowObject(%5BobjectKey%5D)%3Bvar%20propertyNames%3D%5B%5D%3Btry%7BpropertyNames%3DgetKeys(freshWindow%5BobjectKey%5D)%7Dcatch(e)%7B%7Dfor(var%20i%3D0%3Bi%3CpropertyNames.length%3Bi%2B%2B)checkWindowObject(%5BobjectKey%2CpropertyNames%5Bi%5D%5D)%3Bif(freshWindow%5BobjectKey%5D.prototype)%7BpropertyNames%3DgetKeys(freshWindow%5BobjectKey%5D.prototype)%3Bfor(var%20_i%3D0%3B_i%3CpropertyNames.length%3B_i%2B%2B)checkWindowObject(%5BobjectKey%2C%22prototype%22%2CpropertyNames%5B_i%5D%5D)%7D%7D%7Dteardown()%2Cconsole.warn(%22checkWindowOverrides%22%2Coverridden)%7D(window)%3B%7D)()) for identifying native overrides in the current page. 
+# detect-native-overrides
 
-[Hello World](javascript:%28function%28%29%7Balert%28%22Hello%20World%22%29%7D%29%28%29%3B)
+## Bookmarklet
+Copy the source of [detect-native-overrides.js](./TODO.js).
 
+Paste the source into a [bookmarklet maker](http://bookmarklets.org/maker/).
 
-<a href="javascript:function my_bookmarklet()
-                {alert('Hello World');}
-                my_bookmarklet();">Hello</a>
-                
-[Hello World!][1]
-[1]:javascript:alert('Hello World')
+Explore to a page and click the bookmarklet. 
 
+## Tampermonkey
+Install [Tampermonkey](https://tampermonkey.net/).
+
+Click the + to create a new userscript.
+
+Copy the source of [detect-native-overrides.tm.js](./TODO.js) and paste it into the new userscript.
+
+Explore to a page, right click anywhere in the page, 
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
+
+## Expected output
+In the console, you will see a `warn` with an array of overriden methods.
+
+Example:
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "www.google.com")
