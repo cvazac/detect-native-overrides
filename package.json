@@ -1,11 +1,7 @@
 {
   "name": "detect-native-overrides",
   "version": "1.0.0",
-  "description": "TODO",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "description": "Detect native overrides in the current page",
   "scripts": {
     "test": "browserify ./tests/getPrototypeOf.js ./tests/detect.js -o ./tests/build/bundle.js && open ./tests/all.html"
   },
