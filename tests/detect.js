@@ -1,5 +1,4 @@
 var detectNativeOverrides = require('../src/detect').detectNativeOverrides
-console.info('detectNativeOverrides', typeof detectNativeOverrides)
 
 describe('detection suite', function() {
   this.timeout(10000)
