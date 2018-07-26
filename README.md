@@ -2,6 +2,8 @@
 
 ## Getting Started
 ```
+git clone git@github.com:cvazac/detect-native-overrides.git
+cd detect-native-overrides
 npm install
 ```
 
@@ -24,11 +26,6 @@ If you see a method name without a namespace, presume `window`.
 
 ![alt text](https://raw.githubusercontent.com/cvazac/detect-native-overrides/master/img/output.png "newrelic.com")
 
-## Testing
-```
-npm test
-```
-
 ## Limitations
 This bookmarket won't work on pages with strict CSPs, like twitter.com.
 
@@ -36,3 +33,7 @@ We currently rely on `Object.getOwnPropertyNames` which has decent [browser supp
 
 [Tampermonkey](https://tampermonkey.net/) is a wonderful tool that I highly encourage everyone to try out. That said, it overrides many natives, so I recommend that you disable it before running the bookmarklet. 
 
+## Testing
+```
+npm test
+```
