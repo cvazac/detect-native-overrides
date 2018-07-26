@@ -7,8 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "browserify ./tests/getPrototypeOf.js ./tests/detect.js -o ./tests/build/bundle.js",
-    "test": "open ./tests/all.html"
+    "test": "browserify ./tests/getPrototypeOf.js ./tests/detect.js -o ./tests/build/bundle.js && open ./tests/all.html"
   },
   "repository": {
     "type": "git",

@@ -26,7 +26,6 @@ If you see a method name without a namespace, presume `window`.
 
 ## Testing
 ```
-npm run build
 npm test
 ```
 
