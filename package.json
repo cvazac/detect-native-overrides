@@ -1,0 +1,28 @@
+{
+  "name": "detect-native-overrides",
+  "version": "1.0.0",
+  "description": "TODO",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "browserify ./tests/getPrototypeOf.js ./tests/detect.js -o ./tests/build/bundle.js",
+    "test": "open ./tests/all.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cvazac/detect-native-overrides.git"
+  },
+  "author": "Charles Vazac <cvazac@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cvazac/detect-native-overrides/issues"
+  },
+  "homepage": "https://github.com/cvazac/detect-native-overrides#readme",
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
