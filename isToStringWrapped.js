@@ -23,7 +23,9 @@ function isToStringWrapped() {
 
   try {
     method.toString()
-  } catch(e){}
+  } catch(e){
+    trapped = true
+  }
 
   for (i = 0; i < methodNames.length; i++) {
     Function.prototype[methodNames[i]] = _[methodNames[i]]
